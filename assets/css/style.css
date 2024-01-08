@@ -1,0 +1,375 @@
+/* .navbar{
+    background-image: linear-gradient(to right, rgba(5, 0, 255, 1) , rgba(248, 251, 118, 1),rgba(78, 255, 117, 1),rgba(0, 255, 209, 1));
+} */
+
+:root {
+  --reguler: 400;
+  --medium: 500;
+  --semibold: 600;
+  --blueColor: #001aff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.background-gradient {
+  overflow-x: hidden;
+  background-image: linear-gradient(to right, rgba(5, 0, 255, 1), rgba(248, 251, 118, 1), rgba(78, 255, 117, 1), rgba(0, 255, 209, 1));
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.background-blur {
+  background-color: rgba(246, 250, 255, 0.9);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* margin-top: 58px; */
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 58px 150px 0;
+  /* background-color: rgba(255, 255, 255, 0.1); */
+}
+
+nav .logo-name {
+  font-size: 22px;
+  font-weight: var(--semibold);
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: var(--medium);
+  padding: 10px 25px;
+  border-radius: 3px;
+}
+
+nav a:hover {
+  background-color: rgba(128, 128, 128, 0.3);
+}
+
+nav .navbar {
+  display: flex;
+  align-items: center;
+}
+
+nav a.icon {
+  display: none;
+}
+
+nav .navbar a {
+  opacity: 0.8;
+  font-weight: var(--reguler);
+}
+
+nav .navbar a:first-child {
+  opacity: 1;
+  font-weight: var(--reguler);
+}
+
+nav .sign-up a {
+  font-weight: var(--semibold);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* ===========================main=========================== */
+main .header {
+  width: 653px;
+  margin: 0 auto;
+  padding: 237px 0 126px;
+  text-align: center;
+}
+
+.header .title {
+  font-weight: var(--semibold);
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+.header .title-text {
+  font-weight: var(--reguler);
+  font-size: 16px;
+  margin: 0 50px 40px;
+  line-height: 32px;
+}
+
+.header .button-title {
+  font-weight: var(--semibold);
+}
+
+.button-title .btn-title-left {
+  text-decoration: none;
+  /* border: 1px solid transparent; */
+  padding: 12px 17px;
+  color: white;
+  background-color: var(--blueColor);
+  margin-right: 20px;
+  border-radius: 100px;
+  box-shadow: 0 15px 30px rgba(0, 26, 255, 0.2);
+}
+
+.button-title .btn-title-left:hover {
+  background-color: rgba(0, 26, 255, 0.4);
+  box-shadow: 0 15px 30px rgba(0, 26, 255, 0.01);
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.button-title .btn-title-right {
+  color: var(--blueColor);
+}
+
+.button-title .btn-title-right:hover {
+  color: rgba(255, 0, 0, 0.9);
+}
+
+.container {
+  margin: 0 150px;
+  padding-bottom: 96px;
+}
+
+.container > p {
+  margin-bottom: 16px;
+  font-weight: var(--semibold);
+}
+
+.container .cards {
+  display: flex;
+  gap: 30px;
+  justify-content: space-around;
+}
+
+.container .cards .card {
+  width: 360px;
+  border-radius: 8px;
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 30px 60px rgba(0, 26, 255, 0.1);
+  box-sizing: border-box;
+}
+
+.container .cards .card:hover {
+  transform: scale(1.1, 1.1);
+  transition: 0.2s;
+}
+
+.container .cards .card .icon {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.icon .icon-text .icon-text-header {
+  font-weight: var(--semibold);
+  font-size: 18px;
+}
+.icon .icon-text .icon-text-name {
+  font-weight: var(--reguler);
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.card .icon {
+  margin-bottom: 20px;
+}
+
+.card .text {
+  font-weight: var(--reguler);
+  line-height: 30px;
+  opacity: 0.6;
+  margin-bottom: 20px;
+}
+
+hr {
+  opacity: 0.15;
+  margin-bottom: 20px;
+}
+
+.card .price {
+  display: flex;
+  justify-content: space-between;
+  font-weight: var(--semibold);
+}
+
+.card .price .about {
+  padding: 5px 15px;
+  border-radius: 100px;
+  font-size: 12px;
+  /* background-color: rgba(255, 255, 255, 0.15); */
+  background-color: rgba(0, 0, 0, 0.07);
+}
+
+.card .price .price-list {
+  font-size: 14px;
+}
+
+.container .cards .card-left {
+  background-color: var(--blueColor);
+  color: white;
+}
+
+.card-left .price .about {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+/* ===========================Responsive=========================== */
+@media screen and (max-width: 1200px) {
+  .card .price {
+    flex-wrap: wrap;
+  }
+  .container .cards {
+    flex-wrap: wrap;
+  }
+  .container {
+    margin: 0 32px;
+    padding-bottom: 64px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  nav {
+    padding: 58px 75px 0;
+  }
+  nav a {
+    padding: 3px 7px;
+  }
+  .container {
+    margin: 0 8px;
+    padding-bottom: 64px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main .header {
+    width: 570px;
+  }
+  nav {
+    padding: 58px 36px 0;
+  }
+  nav a {
+    padding: 3px 7px;
+  }
+
+  .header .title {
+    width: 80vw;
+    font-size: 26px;
+    margin: 0 auto;
+  }
+
+  .header .title-text {
+    width: 60vw;
+    font-size: 12px;
+    margin: 0 auto 12px;
+  }
+
+  .header .button-title {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .container {
+    margin: 0 50px;
+    padding-bottom: 64px;
+  }
+  .container .cards .card {
+    width: 80%;
+  }
+
+  .button-title .btn-title-left {
+    margin-right: 0;
+    padding: 9px 14px;
+  }
+}
+
+/* EEEEEEEEEEERRRRRRRRRRRRRRROOOOOOOOOOOOOOOORRRRRRRRRRR */
+
+@media screen and (max-width: 576px) {
+  nav {
+    display: block;
+    padding: 0 8px;
+  }
+  nav .navbar,
+  nav .sign-up {
+    background-color: rgba(0, 0, 0, 0.088);
+  }
+
+  nav .navbar,
+  nav .sign-up {
+    display: none;
+  }
+
+  nav .logo-name {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav a {
+    display: block;
+    max-width: 100%;
+  }
+
+  nav .navbar a:first-child {
+    background-color: rgba(0, 0, 0, 0.088);
+  }
+
+  .navbar {
+    max-width: 100%;
+  }
+
+  nav .sign-up a {
+    border: none;
+    font-weight: var(--reguler);
+    opacity: 0.8;
+  }
+
+  nav a.icon {
+    position: relative;
+    display: inline-block;
+    top: 0;
+    right: 0;
+  }
+
+  main .header {
+    width: max-content;
+    /* padding: 237px 0 126px; */
+    padding: 88px 0px 126px;
+    text-align: center;
+  }
+
+  .container {
+    margin: 0 25px;
+    padding-bottom: 64px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  nav {
+    display: block;
+    padding: 0 8px;
+  }
+
+  nav .navbar,
+  nav .sign-up {
+    display: none;
+  }
+
+  nav .logo-name {
+    padding: 8px;
+  }
+
+  .header .button-title {
+    font-size: 12px;
+  }
+}
